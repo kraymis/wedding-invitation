@@ -1,0 +1,266 @@
+export const translations = {
+  fr: {
+    navbar: {
+      brand: "O & W",
+      links: {
+        home: "Accueil",
+        programme: "Programme",
+        location: "Lieu",
+        rsvp: "RSVP",
+      },
+      openMenu: "Ouvrir le menu",
+      closeMenu: "Fermer le menu",
+      languageLabel: "Changer la langue",
+      languageFr: "FR",
+      languageEn: "EN",
+    },
+    hero: {
+      familyLine: "Ensemble avec leurs familles",
+      names: {
+        first: "Oussama",
+        second: "Wafae",
+      },
+      subtitle: "vous invitent à célébrer leur mariage",
+      saveTheDate: "Réservez la date",
+      date: "01 Avril 2026",
+      scroll: "Faire défiler",
+    },
+    countdown: {
+      eyebrow: "Le grand jour",
+      title: "Le grand jour approche",
+      units: {
+        days: "Jours",
+        hours: "Heures",
+        minutes: "Minutes",
+        seconds: "Secondes",
+      },
+      quote: "Deux âmes, un cœur, pour toujours",
+      fallback: "Le grand jour approche",
+    },
+    welcome: {
+      title: "Bienvenue",
+      description: "Nous sommes heureux de vous accueillir",
+      photoAltPrefix: "Souvenir",
+    },
+    programme: {
+      eyebrow: "Le grand jour",
+      title: "Programme de la Journée",
+      items: [
+        {
+          time: "17h30",
+          title: "Cortège du Marié (Mostaganem → Oran)",
+          description: "En route pour célébrer l’union des futurs mariés.",
+        },
+        {
+          time: "19h30",
+          title: "Cérémonie du Henné",
+          description: "Rituel traditionnel d’amour et de bénédictions.",
+        },
+        {
+          time: "21h00",
+          title: "Dîner",
+          description: "Repas élégant partagé en famille et entre proches.",
+        },
+        {
+          time: "22h30",
+          title: "Début de la Soirée",
+          description: "Musique, danse et moments inoubliables.",
+        },
+        {
+          time: "02h00",
+          title: "Pièce Montée",
+          description: "Instant gourmand et symbolique de la nuit.",
+        },
+        {
+          time: "03h00",
+          title: "Fin de la Célébration",
+          description: "La nuit s’achève, les souvenirs restent éternels.",
+        },
+      ],
+    },
+    venue: {
+      title: "Lieu de la Cérémonie",
+      name: "Salle des fêtes Dar Soltane, Es Sénia, Oran",
+      iframeTitle: "Carte Dar Soltane",
+      directions: "Obtenir l'itinéraire",
+    },
+    rsvp: {
+      eyebrow: "Confirmez Votre Présence",
+      title: "Confirmez Votre Présence",
+      description: "Merci de confirmer avant le 20 mars 2026.",
+      fields: {
+        nameLabel: "Prénom et Nom",
+        namePlaceholder: "Votre prénom et nom",
+        attendingLabel: "Serez-vous présent(e) ?",
+        yes: "Oui",
+        no: "Non",
+        guestsLabel: "Nombre d'invités",
+        guestsDecreaseAria: "Diminuer le nombre d'invités",
+        guestsIncreaseAria: "Augmenter le nombre d'invités",
+        messageLabel: "Message pour les mariés",
+        messagePlaceholder: "Un petit mot pour Oussama et Wafae...",
+      },
+      submit: "Envoyer ma confirmation",
+      sending: "Envoi...",
+      successTitle: "Merci !",
+      successMessage: "Merci ! Votre confirmation a bien été envoyée.",
+      coupleDisplay: "Oussama & Wafae",
+      errorMessage: "Une erreur est survenue. Veuillez réessayer.",
+      validation: {
+        nameRequired: "Veuillez renseigner votre prénom et nom.",
+        attendingRequired: "Veuillez indiquer votre présence.",
+      },
+    },
+    music: {
+      enableToast: "Appuyez pour activer la musique 🎵",
+      enableAction: "Activer",
+      playAria: "Activer la musique",
+      muteAria: "Couper la musique",
+      unmuteAria: "Réactiver la musique",
+    },
+    footer: {
+      monogram: "O & W",
+      date: "01 Avril 2026",
+      quote: "L'amour est la seule fleur qui s'épanouit en toutes saisons",
+      thanks: "Merci de partager ce moment unique avec nous.",
+      copyright: "© 2026 Mariage de Oussama & Wafae",
+    },
+    envelope: {
+      clickToOpen: "Cliquez pour ouvrir",
+    },
+  },
+  en: {
+    navbar: {
+      brand: "O & W",
+      links: {
+        home: "Home",
+        programme: "Programme",
+        location: "Venue",
+        rsvp: "RSVP",
+      },
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
+      languageLabel: "Change language",
+      languageFr: "FR",
+      languageEn: "EN",
+    },
+    hero: {
+      familyLine: "Together with their families",
+      names: {
+        first: "Oussama",
+        second: "Wafae",
+      },
+      subtitle: "invite you to celebrate their wedding",
+      saveTheDate: "Save the date",
+      date: "April 01, 2026",
+      scroll: "Scroll",
+    },
+    countdown: {
+      eyebrow: "The big day",
+      title: "The big day is coming",
+      units: {
+        days: "Days",
+        hours: "Hours",
+        minutes: "Minutes",
+        seconds: "Seconds",
+      },
+      quote: "Two souls, one heart, forever",
+      fallback: "The big day is coming",
+    },
+    welcome: {
+      title: "Welcome",
+      description: "We are delighted to welcome you",
+      photoAltPrefix: "Memory",
+    },
+    programme: {
+      eyebrow: "The big day",
+      title: "Day Programme",
+      items: [
+        {
+          time: "5:30 PM",
+          title: "The Groom’s Cortège (Mostaganem → Oran)",
+          description: "On the way to celebrate the union of the couple.",
+        },
+        {
+          time: "7:30 PM",
+          title: "Henna Ceremony",
+          description: "A traditional ritual of love and blessings.",
+        },
+        {
+          time: "9:00 PM",
+          title: "Dinner",
+          description: "An elegant meal shared with loved ones.",
+        },
+        {
+          time: "10:30 PM",
+          title: "Start of the Evening",
+          description: "Music, dancing, and unforgettable moments.",
+        },
+        {
+          time: "2:00 AM",
+          title: "Cake Cutting",
+          description: "A sweet and symbolic highlight of the night.",
+        },
+        {
+          time: "3:00 AM",
+          title: "End of Celebration",
+          description: "The night ends, but memories last forever.",
+        },
+      ],
+    },
+    venue: {
+      title: "Ceremony Venue",
+      name: "Dar Soltane Wedding Hall, Es Sénia, Oran",
+      iframeTitle: "Dar Soltane map",
+      directions: "Get directions",
+    },
+    rsvp: {
+      eyebrow: "Confirm Your Attendance",
+      title: "Confirm Your Attendance",
+      description: "Please confirm before March 20, 2026.",
+      fields: {
+        nameLabel: "First and last name",
+        namePlaceholder: "Your first and last name",
+        attendingLabel: "Will you attend?",
+        yes: "Yes",
+        no: "No",
+        guestsLabel: "Number of guests",
+        guestsDecreaseAria: "Decrease guest count",
+        guestsIncreaseAria: "Increase guest count",
+        messageLabel: "Message for the couple",
+        messagePlaceholder: "A note for Oussama and Wafae...",
+      },
+      submit: "Send my confirmation",
+      sending: "Sending...",
+      successTitle: "Thank you!",
+      successMessage: "Thank you! Your RSVP has been sent successfully.",
+      coupleDisplay: "Oussama & Wafae",
+      errorMessage: "An error occurred. Please try again.",
+      validation: {
+        nameRequired: "Please enter your full name.",
+        attendingRequired: "Please select your attendance.",
+      },
+    },
+    music: {
+      enableToast: "Tap to enable music 🎵",
+      enableAction: "Enable",
+      playAria: "Play music",
+      muteAria: "Mute music",
+      unmuteAria: "Unmute music",
+    },
+    footer: {
+      monogram: "O & W",
+      date: "April 01, 2026",
+      quote: "Love is the only flower that blooms in every season",
+      thanks: "Thank you for sharing this unique moment with us.",
+      copyright: "© 2026 Oussama & Wafae Wedding",
+    },
+    envelope: {
+      clickToOpen: "Click to open",
+    },
+  },
+} as const
+
+export type Language = keyof typeof translations
+
+export type TranslationDictionary = (typeof translations)[Language]

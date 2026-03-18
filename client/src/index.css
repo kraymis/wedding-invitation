@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #faf7f2;
+  color: #2c1810;
+  font-family: "Raleway", "Lato", sans-serif;
+}
+
+.section-padding {
+  padding: 24px 16px;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 56px 24px;
+  }
+}
+
+.btn-base {
+  min-height: 44px;
+  min-width: 44px;
+  transition: transform 200ms ease;
+}
+
+.btn-base:hover {
+  transform: scale(1.03);
+}
+
+.btn-base:active {
+  transform: scale(0.97);
+}
+
+.ornate-corner {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  fill: none;
+  stroke: #c9a84c;
+  stroke-width: 1.2;
+  opacity: 0.85;
+}
+
+.ornate-corner path {
+  fill: rgba(201, 168, 76, 0.16);
+}
+
+@keyframes envelopeAmbient {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.envelope-ambient {
+  animation: envelopeAmbient 3s ease-in-out infinite;
+}
+
