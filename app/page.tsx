@@ -59,7 +59,7 @@ export default function WeddingInvitation() {
           </motion.div>
           
           {/* Floral divider between hero and countdown */}
-          <div className="bg-cream py-5 md:py-8">
+          <div className="bg-cream py-1 md:py-6">
             <FloralDividerAlt className="w-64 md:w-80 mx-auto" />
           </div>
           
@@ -75,7 +75,7 @@ export default function WeddingInvitation() {
           <ProgrammeSection />
           
           {/* Divider */}
-          <div className="bg-ivory py-5 md:py-8">
+          <div className="bg-ivory py-1 md:py-4">
             <FloralDivider className="w-48 md:w-64 mx-auto" />
           </div>
           
@@ -84,7 +84,7 @@ export default function WeddingInvitation() {
           <FilmstripSection />
           
           {/* Divider */}
-          <div className="bg-ivory py-5 md:py-8">
+          <div className="bg-ivory py-1 md:py-4">
             <FloralDividerAlt className="w-64 md:w-80 mx-auto" />
           </div>
           

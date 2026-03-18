@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Volume2, VolumeX } from "lucide-react"
 
 const AUDIO_SRC = "/assets/music/background.mp3"
-const MUSIC_VOLUME_PERCENT = 50
+const MUSIC_VOLUME_PERCENT = 30
 
 function clampVolumePercent(value: number) {
   return Math.min(100, Math.max(0, value))
@@ -18,6 +18,7 @@ export function BackgroundMusic() {
     const audio = audioRef.current
     if (!audio) return
 
+    audio.loop = true
     const normalizedVolume = clampVolumePercent(MUSIC_VOLUME_PERCENT) / 100
     audio.volume = normalizedVolume
 

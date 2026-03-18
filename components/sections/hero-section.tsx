@@ -96,7 +96,7 @@ export function HeroSection() {
 
         {/* Small monogram decoration */}
         <motion.div
-          className="mt-10"
+          className="mt-4 md:mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -105,7 +105,7 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="mt-8"
+          className="mt-2 md:mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}

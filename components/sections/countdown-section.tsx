@@ -65,7 +65,7 @@ export function CountdownSection() {
   ]
 
   return (
-    <section id="countdown" className="relative overflow-hidden bg-ivory py-14 md:py-32">
+    <section id="countdown" className="relative overflow-hidden bg-ivory pt-8 pb-12 md:py-32">
       {/* Decorative background */}
       <div className="absolute inset-0 opacity-5">
         <div 
@@ -82,7 +82,7 @@ export function CountdownSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-6 md:mb-12"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -149,7 +149,7 @@ export function CountdownSection() {
           </motion.div>
         </AnimatePresence>
 
-        <DiamondDivider className="my-12" />
+        <DiamondDivider className="my-8 md:my-12" />
 
         <motion.p
           className="text-center text-muted-foreground text-lg md:text-xl font-serif italic"

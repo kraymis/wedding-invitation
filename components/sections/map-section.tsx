@@ -36,10 +36,10 @@ export function MapSection() {
   }, [isDesktop])
 
   return (
-    <section id="location" className="bg-[#FAF7F2] py-14 md:py-28">
+    <section id="location" className="bg-[#FAF7F2] pt-6 pb-12 md:py-24">
       <div className="mx-auto w-full max-w-6xl px-4 md:px-6 relative z-10">
         <motion.div
-          className="relative z-20 mb-12 text-center"
+          className="relative z-20 mb-8 text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

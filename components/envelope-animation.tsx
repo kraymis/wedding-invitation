@@ -125,8 +125,6 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
     timersRef.current.push(window.setTimeout(() => onOpen(), 600))
     if (onComplete) timersRef.current.push(window.setTimeout(() => onComplete(), 900))
 
-    const screenHeight = typeof window !== "undefined" ? window.innerHeight : 1000
-
     // STEP 1: Micro shake on wrapper (0.0s – 0.25s)
     animate("[data-flap-stamp-wrapper]", 
       { 
@@ -135,11 +133,16 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
       { duration: 0.25, delay: 0, ease: "easeInOut" }
     )
 
-    // STEP 2: Stamp rises (with flap peeling effect) (0.2s – 0.8s)
-    // Stamp rises upward
-    animate("[data-stamp]", 
-      { y: [0, -screenHeight * 1.2] }, 
-      { duration: 0.6, delay: 0.2, ease: "easeIn" }
+    // STEP 2: Stamp rips into two pieces (0.2s – 0.8s)
+    animate(
+      "[data-stamp-left]",
+      { x: [0, -6, -70], rotate: [0, -6, -16], opacity: [1, 1, 0] },
+      { duration: 0.6, delay: 0.2, ease: "easeInOut" }
+    )
+    animate(
+      "[data-stamp-right]",
+      { x: [0, 6, 70], rotate: [0, 6, 16], opacity: [1, 1, 0] },
+      { duration: 0.6, delay: 0.2, ease: "easeInOut" }
     )
     // Flap rotates back from TOP center (stays anchored at top, bottom lifts with stamp)
     animate("[data-top-flap-element]", 
@@ -154,6 +157,16 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
     animate("[data-flap-stamp-wrapper]", 
       { opacity: [1, 0] }, 
       { duration: 0.4, delay: 0.2, ease: "easeIn" }
+    )
+    animate(
+      "[data-open-light]",
+      { opacity: [0, 0.95, 0], scale: [0.7, 1.45, 1.9] },
+      { duration: 0.55, delay: 0.18, ease: "easeOut" }
+    )
+    animate(
+      "[data-envelope-card]",
+      { opacity: [1, 0], scale: [1, 1.02] },
+      { duration: 0.45, delay: 0.24, ease: "easeIn" }
     )
   }
 
@@ -181,6 +194,19 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
             <div data-envelope-body className="absolute inset-0">
               <EnvelopeSurface />
             </div>
+
+            {/* Opening light burst */}
+            <div
+              data-open-light
+              className="pointer-events-none absolute inset-0 z-[15] rounded-[6px]"
+              style={{
+                opacity: 0,
+                transform: "scale(0.7)",
+                background:
+                  "radial-gradient(circle at 50% 60%, rgba(255,250,225,0.95) 0%, rgba(255,245,205,0.55) 24%, rgba(255,240,190,0.25) 44%, rgba(255,240,190,0) 72%)",
+                mixBlendMode: "screen",
+              }}
+            />
 
             {/* Inner Glow Layer - REMOVED */}
 
@@ -211,11 +237,8 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
                 />
               </motion.div>
 
-              {/* Stamp and Text - rises independently */}
-              <motion.div
-                data-stamp
-                className="absolute left-1/2 top-1/2 z-[30] -translate-x-1/2 -translate-y-1/2 text-center"
-              >
+              {/* Stamp and Text */}
+              <motion.div className="absolute left-1/2 top-1/2 z-[30] -translate-x-1/2 -translate-y-1/2 text-center">
                 <motion.button
                   type="button"
                   onClick={handleOpen}
@@ -231,21 +254,47 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
                     justifyContent: "center",
                   }}
                 >
-                  <img
-                    src={STAMP_SRC}
-                    alt="Sceau"
-                    className="w-[155px] md:w-[210px]"
-                    style={{
-                      background: "transparent",
-                      border: "none",
-                      boxShadow: "none",
-                      outline: "none",
-                      display: "block",
-                      height: "auto",
-                      filter: "drop-shadow(0 0 10px #C9A84C)",
-                      animation: "stampGlow 3s ease-in-out infinite",
-                    }}
-                  />
+                  <div className="relative w-[155px] md:w-[210px]" style={{ aspectRatio: "1 / 1" }}>
+                    <motion.img
+                      data-stamp-left
+                      src={STAMP_SRC}
+                      alt="Sceau"
+                      className="absolute inset-0 h-full w-full"
+                      style={{
+                        clipPath: "inset(0 50% 0 0)",
+                        background: "transparent",
+                        border: "none",
+                        boxShadow: "none",
+                        outline: "none",
+                        display: "block",
+                        height: "100%",
+                        objectFit: "contain",
+                        filter: "drop-shadow(0 0 10px #C9A84C)",
+                        animation: "stampGlow 3s ease-in-out infinite",
+                        transformOrigin: "right center",
+                      }}
+                    />
+                    <motion.img
+                      data-stamp-right
+                      src={STAMP_SRC}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full"
+                      style={{
+                        clipPath: "inset(0 0 0 50%)",
+                        background: "transparent",
+                        border: "none",
+                        boxShadow: "none",
+                        outline: "none",
+                        display: "block",
+                        height: "100%",
+                        objectFit: "contain",
+                        filter: "drop-shadow(0 0 10px #C9A84C)",
+                        animation: "stampGlow 3s ease-in-out infinite",
+                        transformOrigin: "left center",
+                      }}
+                    />
+                  </div>
                 </motion.button>
 
                 <motion.p

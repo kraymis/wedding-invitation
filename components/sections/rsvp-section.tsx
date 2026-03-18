@@ -89,13 +89,13 @@ export function RsvpSection() {
   }
 
   return (
-    <section id="rsvp" className="relative overflow-hidden bg-cream py-14 md:py-32">
+    <section id="rsvp" className="relative overflow-hidden bg-cream pt-6 pb-12 md:py-28">
       <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-rose/8 blur-3xl" />
       <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-rose/6 blur-3xl" />
 
       <div className="container relative z-10 mx-auto px-4">
         <motion.div
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
