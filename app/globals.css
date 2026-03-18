@@ -193,15 +193,15 @@
 }
 
 .animate-slide-horizontal {
-  animation: slideHorizontal 26s linear infinite;
+  animation: slideHorizontal 24s linear infinite;
 }
 
 .animate-slide-vertical {
-  animation: slideVertical 22s linear infinite;
+  animation: slideVertical 20s linear infinite;
 }
 
 .animate-filmstrip {
-  animation: filmstrip 18s linear infinite;
+  animation: filmstrip 17s linear infinite;
 }
 
 @keyframes stampGlow {
