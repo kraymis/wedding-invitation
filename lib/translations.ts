@@ -21,12 +21,12 @@ export const translations = {
         second: "Wafae",
       },
       subtitle: "vous invitent à célébrer leur mariage",
-      saveTheDate: "Réservez la date",
+      saveTheDate: "save the date",
       date: "01 Avril 2026",
       scroll: "Faire défiler",
     },
     countdown: {
-      eyebrow: "Le grand jour",
+      eyebrow: "countdown",
       title: "Le grand jour approche",
       units: {
         days: "Jours",
@@ -39,7 +39,7 @@ export const translations = {
     },
     welcome: {
       title: "Bienvenue",
-      description: "Nous sommes heureux de vous accueillir",
+      description: "Nous avons la joie et l’honneur de vous convier à célébrer notre union dans la magnifique ville d’Oran. Nous serions profondément heureux de partager avec vous ce moment unique et inoubliable, entourés de ceux qui nous sont les plus chers.",
       photoAltPrefix: "Souvenir",
     },
     programme: {
@@ -87,7 +87,7 @@ export const translations = {
     rsvp: {
       eyebrow: "Confirmez Votre Présence",
       title: "Confirmez Votre Présence",
-      description: "Merci de confirmer avant le 20 mars 2026.",
+      description: "Merci de nous confirmer votre présence.",
       fields: {
         nameLabel: "Prénom et Nom",
         namePlaceholder: "Votre prénom et nom",
