@@ -35,25 +35,26 @@ export default function WeddingInvitation() {
 
       {/* Main Content */}
       <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          animate={isEnvelopeOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
-          transition={{ duration: 0.45, delay: 0.9, ease: "easeOut" }}
-          style={{ pointerEvents: isEnvelopeOpen ? "auto" : "none" }}
-        >
+        {isEnvelopeOpen ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 6 }}
+            transition={{ duration: 0.55, delay: 0.05, ease: "easeOut" }}
+          >
           {isEnvelopeOpen ? <BackgroundMusic /> : null}
           <ScrollProgress />
           <motion.div
             initial={{ opacity: 0, y: -8 }}
-            animate={isEnvelopeOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -8 }}
-            transition={{ duration: 0.35, delay: 1.0, ease: "easeOut" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.12, ease: "easeOut" }}
           >
             <Navigation />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 6 }}
-            animate={isEnvelopeOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
-            transition={{ duration: 0.35, delay: 1.05, ease: "easeOut" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
           >
             <HeroSection />
           </motion.div>
@@ -92,6 +93,7 @@ export default function WeddingInvitation() {
           
           <FooterSection />
         </motion.div>
+        ) : null}
       </AnimatePresence>
     </main>
   )

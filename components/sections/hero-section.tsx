@@ -49,13 +49,48 @@ export function HeroSection() {
 
         <motion.h1
           className="text-5xl md:text-7xl lg:text-8xl font-serif font-semibold text-foreground mb-6"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.16,
+                delayChildren: 0.18,
+              },
+            },
+          }}
         >
-          <span className="block text-balance">{t.hero.names.first}</span>
-          <span className="text-gold text-3xl md:text-4xl lg:text-5xl font-light italic">&</span>
-          <span className="block text-balance">{t.hero.names.second}</span>
+          <motion.span
+            className="block text-balance"
+            variants={{
+              hidden: { opacity: 0, y: 34, x: 14, filter: "blur(6px)" },
+              visible: { opacity: 1, y: 0, x: 0, filter: "blur(0px)" },
+            }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
+          >
+            {t.hero.names.first}
+          </motion.span>
+          <motion.span
+            className="text-gold text-3xl md:text-4xl lg:text-5xl font-light italic"
+            variants={{
+              hidden: { opacity: 0, y: 34, x: 14, filter: "blur(6px)" },
+              visible: { opacity: 1, y: 0, x: 0, filter: "blur(0px)" },
+            }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
+          >
+            &
+          </motion.span>
+          <motion.span
+            className="block text-balance"
+            variants={{
+              hidden: { opacity: 0, y: 34, x: 14, filter: "blur(6px)" },
+              visible: { opacity: 1, y: 0, x: 0, filter: "blur(0px)" },
+            }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
+          >
+            {t.hero.names.second}
+          </motion.span>
         </motion.h1>
 
         <motion.div

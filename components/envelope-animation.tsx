@@ -122,8 +122,8 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
   const handleOpen = async () => {
     if (opening) return
     setOpening(true)
-    timersRef.current.push(window.setTimeout(() => onOpen(), 850))
-    if (onComplete) timersRef.current.push(window.setTimeout(() => onComplete(), 1300))
+    timersRef.current.push(window.setTimeout(() => onOpen(), 650))
+    if (onComplete) timersRef.current.push(window.setTimeout(() => onComplete(), 1250))
 
     // STEP 1: Micro shake on wrapper (0.0s – 0.25s)
     animate("[data-flap-stamp-wrapper]", 
