@@ -122,51 +122,51 @@ export function EnvelopeAnimation({ onOpen, onComplete }: EnvelopeAnimationProps
   const handleOpen = async () => {
     if (opening) return
     setOpening(true)
-    timersRef.current.push(window.setTimeout(() => onOpen(), 600))
-    if (onComplete) timersRef.current.push(window.setTimeout(() => onComplete(), 900))
+    timersRef.current.push(window.setTimeout(() => onOpen(), 850))
+    if (onComplete) timersRef.current.push(window.setTimeout(() => onComplete(), 1300))
 
     // STEP 1: Micro shake on wrapper (0.0s – 0.25s)
     animate("[data-flap-stamp-wrapper]", 
       { 
         x: [0, -2, 2, 0]
       }, 
-      { duration: 0.25, delay: 0, ease: "easeInOut" }
+      { duration: 0.35, delay: 0, ease: "easeInOut" }
     )
 
     // STEP 2: Stamp rips into two pieces (0.2s – 0.8s)
     animate(
       "[data-stamp-left]",
       { x: [0, -6, -70], rotate: [0, -6, -16], opacity: [1, 1, 0] },
-      { duration: 0.6, delay: 0.2, ease: "easeInOut" }
+      { duration: 0.85, delay: 0.25, ease: "easeInOut" }
     )
     animate(
       "[data-stamp-right]",
       { x: [0, 6, 70], rotate: [0, 6, 16], opacity: [1, 1, 0] },
-      { duration: 0.6, delay: 0.2, ease: "easeInOut" }
+      { duration: 0.85, delay: 0.25, ease: "easeInOut" }
     )
     // Flap rotates back from TOP center (stays anchored at top, bottom lifts with stamp)
     animate("[data-top-flap-element]", 
       { rotateX: [0, -150] }, 
-      { duration: 0.6, delay: 0.2, ease: "easeInOut" }
+      { duration: 0.85, delay: 0.25, ease: "easeInOut" }
     )
     // Everything fades smoothly (light revealing website) - faster to not interfere with content
     animate("[data-envelope-body]", 
       { opacity: [1, 0] }, 
-      { duration: 0.4, delay: 0.2, ease: "easeIn" }
+      { duration: 0.65, delay: 0.32, ease: "easeIn" }
     )
     animate("[data-flap-stamp-wrapper]", 
       { opacity: [1, 0] }, 
-      { duration: 0.4, delay: 0.2, ease: "easeIn" }
+      { duration: 0.65, delay: 0.32, ease: "easeIn" }
     )
     animate(
       "[data-open-light]",
       { opacity: [0, 0.95, 0], scale: [0.7, 1.45, 1.9] },
-      { duration: 0.55, delay: 0.18, ease: "easeOut" }
+      { duration: 0.8, delay: 0.28, ease: "easeOut" }
     )
     animate(
       "[data-envelope-card]",
       { opacity: [1, 0], scale: [1, 1.02] },
-      { duration: 0.45, delay: 0.24, ease: "easeIn" }
+      { duration: 0.7, delay: 0.35, ease: "easeIn" }
     )
   }
 

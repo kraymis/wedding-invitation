@@ -38,7 +38,7 @@ export default function WeddingInvitation() {
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={isEnvelopeOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
-          transition={{ duration: 0.3, delay: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.45, delay: 0.9, ease: "easeOut" }}
           style={{ pointerEvents: isEnvelopeOpen ? "auto" : "none" }}
         >
           {isEnvelopeOpen ? <BackgroundMusic /> : null}
@@ -46,14 +46,14 @@ export default function WeddingInvitation() {
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={isEnvelopeOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -8 }}
-            transition={{ duration: 0.25, delay: 0.65, ease: "easeOut" }}
+            transition={{ duration: 0.35, delay: 1.0, ease: "easeOut" }}
           >
             <Navigation />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 6 }}
             animate={isEnvelopeOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
-            transition={{ duration: 0.25, delay: 0.68, ease: "easeOut" }}
+            transition={{ duration: 0.35, delay: 1.05, ease: "easeOut" }}
           >
             <HeroSection />
           </motion.div>
